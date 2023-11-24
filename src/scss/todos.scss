@@ -1,0 +1,10 @@
+@use "template.scss" as mytemp;
+@use "_mycolor" as mycolor;
+.custom-todos {
+  // border: 10px solid green;
+  width: 100%;
+  @include mytemp.Custom-flex(row, center, unset);
+  padding: 0 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}

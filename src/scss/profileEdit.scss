@@ -1,0 +1,53 @@
+@use "template.scss" as mytemp;
+@use "_mycolor" as mycolor;
+.custom-profile-edit {
+  text-align: center;
+  input[type="text"],
+  input[type="password"] {
+    width: 95%;
+    height: 40px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 25px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 2px solid orange;
+    color: rgb(253, 45, 45);
+    font-weight: 500;
+    &::placeholder {
+      color: rgb(252, 90, 90);
+    }
+
+    &:focus {
+      outline: 2px solid rgb(190, 190, 29);
+      border: none;
+    }
+  }
+}
+
+.editprofileopen {
+  background: #dc3545;
+  color: white;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 5px;
+  &:hover {
+    border: none;
+    background-color: rgba(179, 33, 23, 0.973);
+  }
+  &:active {
+    border: none;
+    color: #000;
+    background: white;
+    border: 3px solid rgb(255, 251, 0);
+  }
+}
+.profiletask {
+  background: #dc3545;
+  color: white;
+  padding: 6px 15px;
+  border: none;
+  width: 100px;
+  margin: 50px auto 0;
+  border-radius: 5px;
+}

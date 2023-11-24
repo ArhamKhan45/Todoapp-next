@@ -1,0 +1,23 @@
+@use "template.scss" as mytemp;
+@use "_mycolor" as mycolor;
+.custom-todo-container {
+  border: 1px solid red;
+  width: calc(50% - 30px);
+  padding: 25px;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: all 0.9s ease-in-out;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 5px 6px 2px rgb(253, 137, 137);
+  }
+}
+
+// media queries
+@media screen and (min-width: 0px) and (max-width: 992px) {
+  .custom-todo-container {
+    width: calc(80%);
+  }
+}

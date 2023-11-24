@@ -1,0 +1,73 @@
+@use "_mycolor" as mycolor;
+
+.custom-nav {
+  background: mycolor.$nav-bg-color;
+  padding: 0px;
+  height: 54px;
+  box-sizing: border-box;
+  a.navbar-brand {
+    color: mycolor.$nav-text-color;
+    font-weight: 600;
+    font-size: 20px;
+    transition: all 0.6s ease;
+    &:hover {
+      font-size: 25px;
+    }
+  }
+  .navbar-nav {
+    a,
+    button {
+      text-decoration: none;
+      color: mycolor.$nav-text-color;
+      display: inline-block;
+      padding: 13px 40px;
+      transition: all 1s;
+      transition: all 1s;
+      font-weight: 300;
+      border: none;
+      &:hover {
+        border: 1px solid red;
+        box-shadow: 2px 4px rgb(240, 240, 240);
+      }
+    }
+  }
+}
+// media query
+@media only screen and (min-width: 0px) and (max-width: 556px) {
+  .custom-nav {
+    padding: 8px 10px;
+    height: auto;
+    background: mycolor.$nav-bg-color;
+    a.navbar-brand {
+      color: mycolor.$nav-text-color;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.7s ease;
+      &:hover {
+        font-size: 20px;
+      }
+    }
+    .navbar-nav {
+      margin-top: 10px;
+      a {
+        color: mycolor.$nav-text-color;
+        display: inline-block;
+        padding: 15px 40px;
+      }
+      button {
+        text-align: start;
+      }
+    }
+  }
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(247, 247, 247, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(247, 247, 247);
+  transition: box-shadow 0.4s linear;
+  &:focus {
+    box-shadow: 1px 1px 2px rgb(255, 255, 255);
+  }
+}

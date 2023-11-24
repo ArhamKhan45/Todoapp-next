@@ -1,0 +1,208 @@
+@use "template.scss" as mytemp;
+@use "_mycolor" as mycolor;
+.custom-login {
+  @include mytemp.Custom-flex(row, center, unset);
+
+  margin: 0 auto;
+  margin-top: 70px;
+  form {
+    @include mytemp.Custom-flex(column, center, unset);
+    width: 80%;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 75%;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      padding: 5px 8px;
+      border-radius: 5px;
+      border: 2px solid orange;
+      color: rgb(253, 45, 45);
+      font-weight: 500;
+      &::placeholder {
+        color: rgb(252, 90, 90);
+      }
+
+      &:focus {
+        outline: 2px solid rgb(190, 190, 29);
+        border: none;
+      }
+    }
+
+    input[type="submit"] {
+      background: mycolor.$btn-bg-color;
+      color: mycolor.$btn-text-color;
+      border: none;
+      padding: 8px;
+      font-weight: 600;
+      box-sizing: border-box;
+      width: 75%;
+      height: 45px;
+      margin: 0 auto;
+      &:hover {
+        border: 2px solid rgb(253, 45, 45);
+      }
+    }
+    div {
+      margin: 20px auto;
+      color: rgb(253, 45, 45);
+
+      a {
+        color: rgb(253, 45, 45);
+      }
+      p:first-child {
+        text-align: center;
+      }
+    }
+  }
+}
+.custom-register {
+  @include mytemp.Custom-flex(row, center, unset);
+
+  margin: 0 auto;
+  margin-top: 70px;
+  form {
+    @include mytemp.Custom-flex(column, center, unset);
+    width: 80%;
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 75%;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      padding: 5px 8px;
+      border-radius: 5px;
+      border: 2px solid orange;
+      color: rgb(253, 45, 45);
+      font-weight: 500;
+      &::placeholder {
+        color: rgb(252, 90, 90);
+      }
+
+      &:focus {
+        outline: 2px solid rgb(190, 190, 29);
+        border: none;
+      }
+    }
+
+    input[type="submit"] {
+      background: mycolor.$btn-bg-color;
+      color: mycolor.$btn-text-color;
+      border: none;
+      padding: 8px;
+      font-weight: 600;
+      box-sizing: border-box;
+      width: 75%;
+      height: 45px;
+      margin: 0 auto;
+      &:hover {
+        border: 2px solid rgb(253, 45, 45);
+      }
+    }
+  }
+}
+
+.custom-createtodo {
+  @include mytemp.Custom-flex(row, center, unset);
+
+  margin: 0 auto;
+  margin-top: 70px;
+  form {
+    @include mytemp.Custom-flex(column, center, unset);
+    width: 80%;
+
+    input[type="text"] {
+      width: 75%;
+      height: 40px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      padding: 5px 8px;
+      border-radius: 5px;
+      border: 2px solid orange;
+      color: rgb(253, 45, 45);
+      font-weight: 500;
+      &::placeholder {
+        color: rgb(252, 90, 90);
+      }
+
+      &:focus {
+        outline: 2px solid rgb(190, 190, 29);
+        border: none;
+      }
+    }
+    textarea {
+      width: 75%;
+      height: 150px;
+      margin: 0 auto;
+      margin-bottom: 25px;
+      resize: none;
+      padding: 8px 10px;
+      border-radius: 5px;
+      border: 2px solid orange;
+      color: rgb(253, 45, 45);
+      font-weight: 500;
+      &::placeholder {
+        color: rgb(252, 90, 90);
+      }
+
+      &:focus {
+        outline: 2px solid rgb(190, 190, 29);
+        border: none;
+      }
+    }
+    input[type="submit"] {
+      background: mycolor.$btn-bg-color;
+      color: mycolor.$btn-text-color;
+      border: none;
+      padding: 8px;
+      font-weight: 600;
+      box-sizing: border-box;
+      width: 75%;
+      height: 45px;
+      margin: 0 auto;
+      &:hover {
+        border: 2px solid rgb(253, 45, 45);
+      }
+    }
+    div {
+      margin: 20px auto;
+      color: rgb(253, 45, 45);
+
+      a {
+        color: rgb(253, 45, 45);
+      }
+      p:first-child {
+        text-align: center;
+      }
+    }
+  }
+}
+
+// media query
+@media only screen and (min-width: 0px) and (max-width: 556px) {
+  .custom-login,
+  .custom-register {
+    form {
+      width: 100%;
+      input[type="text"],
+      input[type="email"],
+      input[type="password"] {
+        width: 80%;
+      }
+
+      input[type="submit"] {
+        width: 80%;
+      }
+    }
+  }
+
+  .custom-createtodo {
+    form {
+      width: 100%;
+    }
+  }
+}

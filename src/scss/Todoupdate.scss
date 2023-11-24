@@ -1,0 +1,6 @@
+@use "template.scss" as mytemp;
+@use "_mycolor" as mycolor;
+
+.custom-todoupdate {
+  @include mytemp.Custom-flex(row, space-around, unset);
+}

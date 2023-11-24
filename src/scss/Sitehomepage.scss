@@ -1,0 +1,11 @@
+.custom-Sitehomepage {
+  border: 5px outset red;
+  margin-top: 60px;
+  padding: 30px;
+  transition: all 2s;
+
+  &:hover {
+    box-shadow: 4px 15px 19px red;
+    transform: translateY(-20px);
+  }
+}

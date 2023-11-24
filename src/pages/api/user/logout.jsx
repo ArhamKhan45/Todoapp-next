@@ -18,7 +18,7 @@ const logoutapi = catchAsyncError(async (req, res) => {
 
   const mycookiename = getCookieName(req);
 
-  setCookie(res, mycookiename, null, false);
+  setCookie(res, null, false);
   return successUserHandler(
     res,
     200,

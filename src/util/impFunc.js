@@ -25,10 +25,10 @@ export const generatetoken = (_id) => {
   return token;
 };
 
-export const setCookie = (res, name, token, set) => {
+export const setCookie = (res, token, set) => {
   res.setHeader(
     "Set-Cookie",
-    serialize(name, set ? token : "", {
+    serialize("token", set ? token : "", {
       path: "/",
       httpOnly: true,
       maxAge: set ? 15 * 24 * 60 * 60 * 1000 : 0,

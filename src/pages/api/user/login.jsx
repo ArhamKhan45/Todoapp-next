@@ -51,7 +51,7 @@ const loginapi = catchAsyncError(async (req, res) => {
   } else {
     const token = generatetoken(user._id);
 
-    setCookie(res, user.name, token, true);
+    setCookie(res, token, true);
 
     user = Userwithoutpassword(user);
     // console.log(user);

@@ -25,16 +25,14 @@ const Tododata = async (token) => {
 };
 
 const todos = async () => {
-  let tokenmaker = cookies().getAll();
+  var token = cookies().get("token");
 
-  var token;
-  if (tokenmaker.length > 0) {
-    token = tokenmaker[0].value;
+  if (token) {
   } else {
     token = [];
   }
 
-  const task = await Tododata(token);
+  const task = await Tododata(token.value);
 
   const Alltasks = task.map((item) => {
     return (

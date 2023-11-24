@@ -11,10 +11,8 @@ function Loginpage() {
   const [password, setpassword] = useState("");
   const { user, setUser } = useContext(Usercontext);
   const router = useRouter();
-  // if (user._id) return redirect("/");
-  if (user._id) {
-    router.push("/");
-  }
+   if (user._id) return redirect("/");
+
   return (
     <div className="custom-login">
       <form onSubmit={(e) => loginHandler(e, email, password, setUser)}>

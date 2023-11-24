@@ -14,7 +14,6 @@ function Loginpage() {
   // if (user._id) return redirect("/");
   if (user._id) {
     router.push("/");
-    router.refresh();
   }
   return (
     <div className="custom-login">
